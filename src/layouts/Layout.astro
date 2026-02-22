@@ -2,12 +2,22 @@
 export interface Props {
   title?: string;
   description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonical?: string;
+  schema?: object;
 }
 
 const { 
   title = "Egedal Bogholderi - Professionel bogføring i Egedal", 
-  description = "Egedal Bogholderi tilbyder personlig sparring og fleksibel bogføring til faste priser. 450 kr + moms pr. time. Kontakt os i dag."
+  description = "Egedal Bogholderi tilbyder personlig sparring og fleksibel bogføring til faste priser. 450 kr + moms pr. time. Kontakt os i dag.",
+  keywords = "bogholder, bogholderi, egedal, regnskab, bogføring, lokal bogholder, personlig sparring",
+  ogImage = "https://egedalbogholderi.dk/og-image.jpg",
+  canonical = "https://egedalbogholderi.dk",
+  schema
 } = Astro.props;
+
+const currentYear = new Date().getFullYear();
 ---
 
 <!DOCTYPE html>
@@ -15,12 +25,47 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Egedal Bogholderi" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Danish" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Favicon -->
     <link rel="icon" href="/favicon.svg?v=eb" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="da_DK" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    
+    <!-- Schema.org JSON-LD -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
   </head>
   <body class="font-sans antialiased bg-white text-gray-900">
     <slot />

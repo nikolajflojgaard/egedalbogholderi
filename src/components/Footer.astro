@@ -2,7 +2,7 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-50 border-t border-gray-200">
+<footer class="bg-gray-50 border-t border-gray-200" role="contentinfo">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid md:grid-cols-3 gap-8">
       <div>
@@ -12,15 +12,19 @@ const currentYear = new Date().getFullYear();
           </div>
           <span class="font-semibold">Egedal Bogholderi</span>
         </div>
-        <p class="text-gray-600 text-sm">Professionel bogføring med personlig sparring. Lokale bogholder i Egedal.</p>
+        <p class="text-gray-600 text-sm">Professionel bogføring med personlig sparring. Din lokale bogholder i Egedal.</p>
       </div>
 
       <div>
         <h4 class="font-semibold mb-4">Kontakt</h4>
-        <ul class="space-y-2 text-gray-600 text-sm">
-          <li><a href="tel:+4530404494" class="hover:text-primary">+45 30 40 44 94</a></li>
-          <li><a href="mailto:Gitte@egedalbogholderi.dk" class="hover:text-primary">Gitte@egedalbogholderi.dk</a></li>
-        </ul>
+        <address class="not-italic space-y-2 text-gray-600 text-sm">
+          <div>
+            <a href="tel:+4530404494" class="hover:text-primary">+45 30 40 44 94</a>
+          </div>
+          <div>
+            <a href="mailto:Gitte@egedalbogholderi.dk" class="hover:text-primary">Gitte@egedalbogholderi.dk</a>
+          </div>
+        </address>
       </div>
 
       <div>
