@@ -10,38 +10,12 @@ const schema = {
   "description": "Professionel bogføring med personlig sparring. Løbende bogføring, betaling af regninger, rykkerhåndtering og fakturering til faste priser.",
   "url": "https://egedalbogholderi.dk",
   "telephone": "+4530404494",
-  "email": "Gitte@egedalbogholderi.dk",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Egedal",
-    "addressRegion": "Hovedstaden",
-    "addressCountry": "DK"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "55.7704",
-    "longitude": "12.1894"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Egedal"
-  },
-  "serviceType": [
-    "Bogføring",
-    "Regnskab",
-    "Fakturering",
-    "Rykkerhåndtering",
-    "Administrative opgaver"
-  ],
-  "priceRange": "$$",
-  "openingHours": "Mo-Fr 09:00-17:00",
-  "paymentAccepted": ["Bankoverførsel"],
-  "currenciesAccepted": "DKK"
+  "email": "Gitte@egedalbogholderi.dk"
 };
 
 const title = "Egedal Bogholderi - Professionel bogføring i Egedal";
 const description = "Egedal Bogholderi tilbyder personlig sparring og fleksibel bogføring. Løbende bogføring, fakturering, rykkerhåndtering. 450 kr + moms pr. time.";
-const keywords = "bogholder egedal, bogholderi egedal, regnskab egedal, bogføring egedal, lokal bogholder, personlig bogholder, bogføringshjælp";
+const keywords = "bogholder egedal, bogholderi egedal, regnskab egedal, bogføring egedal, lokal bogholder";
 const canonical = "https://egedalbogholderi.dk";
 ---
 
@@ -56,7 +30,7 @@ const canonical = "https://egedalbogholderi.dk";
 
   <main>
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-20" aria-label="Hovedsektion">
+    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl">
           <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-6">
@@ -77,7 +51,6 @@ const canonical = "https://egedalbogholderi.dk";
             <a 
               href="kontakt.html" 
               class="inline-flex items-center px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition-colors"
-              aria-label="Få et tilbud på bogføring"
             >
               Få et tilbud
             </a>
@@ -87,137 +60,139 @@ const canonical = "https://egedalbogholderi.dk";
     </section>
 
     <!-- Services -->
-    <section class="py-20" aria-labelledby="services-heading">
+    <section class="py-20">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 id="services-heading" class="text-3xl font-bold text-gray-900 mb-4">Hvad kan jeg hjælpe dig med?</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Hvad kan jeg hjælpe dig med?</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
             Jeg tilbyder komplet bogføringshjælp til små og mellemstore virksomheder i Egedal og omegn.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <article class="bg-white border border-gray-200 p-8 rounded-2xl">
-            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          <!-- Card 1 -->
+          <div class="bg-white border border-gray-200 p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
             </div>
             <h3 class="text-xl font-semibold mb-3">Løbende bogføring</h3>
             <p class="text-gray-600">Faste arbejdsgange og struktureret bogføring, så du altid har overblik over din økonomi.</p>
-          </article>
+          </div>
 
-          <article class="bg-white border border-gray-200 p-8 rounded-2xl">
-            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          <!-- Card 2 -->
+          <div class="bg-white border border-gray-200 p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
             <h3 class="text-xl font-semibold mb-3">Personlig sparring</h3>
             <p class="text-gray-600">Direkte adgang til bogholder når du har spørgsmål. Ingen callcentre eller automatisk svar.</p>
-          </article>
+          </div>
 
-          <article class="bg-white border border-gray-200 p-8 rounded-2xl">
-            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          <!-- Card 3 -->
+          <div class="bg-white border border-gray-200 p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <h3 class="text-xl font-semibold mb-3">Fleksibel løsning</h3>
             <p class="text-gray-600">Ingen fast ansættelse. Jeg tilpasser omfanget efter dine behov og virksomhedens størrelse.</p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Detailed Services -->
-    <section class="py-20 bg-gray-50" aria-labelledby="ydelser-heading">
+    <!-- Services Grid -->
+    <section class="py-20 bg-gray-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 id="ydelser-heading" class="text-3xl font-bold text-gray-900 mb-4">Ydelser jeg tilbyder</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Ydelser jeg tilbyder</h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            Alt inden for <span class="bg-primary/10 px-2 py-1 rounded"><strong>bogføring</strong></span> og administrative opgaver — til fast timepris.
+            Alt inden for <span class="bg-primary/10 px-2 py-1 rounded font-medium">bogføring</span> og administrative opgaver.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <article class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          <!-- Service 1 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
             </div>
             <h3 class="font-semibold text-gray-900 mb-2">Bogføring</h3>
-            <p class="text-sm text-gray-600">Løbende bogføring med faste arbejdsgange og struktur.</p>
-          </article>
+            <p class="text-sm text-gray-600">Løbende bogføring med faste arbejdsgange.</p>
+          </div>
 
-          <article class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          <!-- Service 2 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
             <h3 class="font-semibold text-gray-900 mb-2">Betaling af regninger</h3>
-            <p class="text-sm text-gray-600">Jeg sørger for at dine leverandører får betalt til tiden.</p>
-          </article>
+            <p class="text-sm text-gray-600">Dine leverandører får betalt til tiden.</p>
+          </div>
 
-          <article class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          <!-- Service 3 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
             <h3 class="font-semibold text-gray-900 mb-2">Rykkerhåndtering</h3>
-            <p class="text-sm text-gray-600">Opfølgning på udestående fakturaer og rykkere.</p>
-          </article>
+            <p class="text-sm text-gray-600">Opfølgning på udestående fakturaer.</p>
+          </div>
 
-          <article class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+          <!-- Service 4 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a1 1 0 11-2 0 1 1 0 012 0z" />
               </svg>
             </div>
             <h3 class="font-semibold text-gray-900 mb-2">Fakturering</h3>
-            <p class="text-sm text-gray-600">Opret og send fakturaer til dine kunder.</p>
-          </article>
+            <p class="text-sm text-gray-600">Opret og send fakturaer til kunder.</p>
+          </div>
 
-          <article class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+          <!-- Service 5 -->
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
             </div>
             <h3 class="font-semibold text-gray-900 mb-2">Administrative opgaver</h3>
-            <p class="text-sm text-gray-600">Diverse admin-opgaver der frigør din tid.</p>
-          </article>
+            <p class="text-sm text-gray-600">Admin-opgaver der frigør din tid.</p>
+          </div>
         </div>
 
         <div class="mt-12 text-center">
           <div class="inline-flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm border border-gray-200">
-            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <div>
-              <span class="font-semibold text-gray-900">Alt til samme pris:</span>
-              <span class="text-gray-600 ml-2">450 kr + moms pr. påbegyndt time</span>
-            </div>
+            <span class="font-semibold text-gray-900">Alt til samme pris: 450 kr + moms pr. time</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-20 bg-gray-50" aria-labelledby="cta-heading">
+    <section class="py-20 bg-accent">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 id="cta-heading" class="text-3xl font-bold text-gray-900 mb-4">Klar til at få styr på bogføringen?</h2>
-        <p class="text-gray-600 text-lg mb-8">
-          Tag en uforpligtende snak om, hvordan jeg kan hjælpe din virksomhed med professionel bogføring i Egedal.
-        </p>
+        <h2 class="text-3xl font-bold text-white mb-4">Klar til at få styr på bogføringen?</h2>
+        <p class="text-white/90 text-lg mb-8">Tag en uforpligtende snak om, hvordan jeg kan hjælpe din virksomhed.</p>
 
         <a 
           href="kontakt.html" 
-          class="inline-flex items-center px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition-colors"
-          aria-label="Kontakt Egedal Bogholderi"
+          class="inline-flex items-center px-8 py-4 bg-white text-accent font-semibold rounded-lg hover:bg-gray-100 transition-colors"
         >
           Kontakt mig
         </a>
