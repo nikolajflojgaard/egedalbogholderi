@@ -33,114 +33,59 @@ const canonical = "https://egedalbogholderi.dk/om.html";
 >
   <Header />
 
-  <main>
-    <!-- Hero -->
-    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-16">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="text-sm text-white/70 mb-6" aria-label="Brødkrummer">
-          <a href="index.html" class="hover:text-white">Forside</a>
-          <span class="mx-2">/</span>
-          <span>Om</span>
-        </nav>
-        <h1 class="text-4xl lg:text-5xl font-bold">Om Egedal Bogholderi</h1>
-        <p class="text-xl text-white/80 mt-4 max-w-2xl">Din lokale bogholder med fokus på personlig service og faste priser.</p>
-      </div>
-    </section>
+  <main class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-gray-500 mb-8" aria-label="Brødkrummer">
+        <a href="index.html" class="hover:text-primary">Forside</a>
+        <span class="mx-2">/</span>
+        <span>Om</span>
+      </nav>
 
-    <!-- Intro -->
-    <section class="py-16">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-accent/5 border-l-4 border-accent p-6 rounded-r-xl mb-12">
-          <p class="text-xl text-gray-700 italic">
-            "Egedal Bogholderi er et lokal bogholderi med sans for detalje og fokus på personlig service."
-          </p>
-        </div>
-      </div>
-    </section>
+      <article>
+        <h1 class="text-4xl font-bold text-gray-900 mb-8">Om Egedal Bogholderi</h1>
 
-    <!-- Features Grid -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 gap-8">
-          
-          <!-- Feature 1 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-semibold text-gray-900 mb-3">Personlig sparring</h2>
-            <p class="text-gray-600 leading-relaxed">
-              Når du arbejder med mig, får du direkte adgang til bogholder. Ingen callcentre, ingen automatisk svar — bare personlig sparring og hurtig hjælp når du har brug for det.
-            </p>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-semibold text-gray-900 mb-3">Fleksibel løsning</h2>
-            <p class="text-gray-600 leading-relaxed">
-              Jeg tilbyder fleksibel bogføring uden fast intern ansættelse. Du betaler kun for den tid jeg bruger på din virksomhed. Perfekt for små og mellemstore virksomheder.
-            </p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-semibold text-gray-900 mb-3">Faste arbejdsgange</h2>
-            <p class="text-gray-600 leading-relaxed">
-              Med løbende bogføring og faste arbejdsgange sikrer jeg, at din økonomi altid er up-to-date. Du får overblik og ro i maven.
-            </p>
-          </div>
-
-          <!-- Feature 4 -->
-          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <h2 class="text-2xl font-semibold text-gray-900 mb-3">Fast timepris</h2>
-            <p class="text-gray-600 leading-relaxed">
-              Jeg arbejder til en fast timepris på 450 kr + moms pr. påbegyndt time. Ingen skjulte gebyrer, ingen overraskelser — bare ærlig og gennemsigtig prissætning.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-20 bg-accent">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Klar til at samarbejde?</h2>
-        <p class="text-white/90 text-lg mb-8">
-          Lad os tage en uforpligtende snak om, hvordan jeg kan hjælpe din virksomhed.
+        <p class="text-xl text-gray-600 mb-8">
+          Egedal Bogholderi er et lokal bogholderi med sans for detalje og fokus på personlig service.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Personlig sparring</h2>
+        
+        <p class="text-gray-600 mb-4">
+          Når du arbejder med mig, får du direkte adgang til bogholder. Ingen callcentre, ingen automatisk svar — bare personlig sparring og hurtig hjælp når du har brug for det.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Fleksibel løsning</h2>
+        
+        <p class="text-gray-600 mb-4">
+          Jeg tilbyder fleksibel bogføring uden fast intern ansættelse. Det betyder, at du kun betaler for den tid jeg bruger på din virksomhed. Perfekt for små og mellemstore virksomheder, der ikke har behov for en fuldtids bogholder.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Faste arbejdsgange</h2>
+        
+        <p class="text-gray-600 mb-4">
+          Med løbende bogføring og faste arbejdsgange sikrer jeg, at din økonomi altid er up-to-date. Du får overblik og ro i maven, så du kan fokusere på det, du er bedst til — at drive din virksomhed.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Fast timepris</h2>
+        
+        <p class="text-gray-600 mb-8">
+          Jeg arbejder til en fast timepris på 450 kr + moms pr. påbegyndt time. Ingen skjulte gebyrer, ingen overraskelser — bare ærlig og gennemsigtig prissætning.
+        </p>
+
+        <div class="bg-gray-50 rounded-2xl p-8 mt-12">
+          <h3 class="text-xl font-semibold mb-4">Kontakt mig</h3>
+          <p class="text-gray-600 mb-6">Har du spørgsmål eller vil du høre mere om, hvordan jeg kan hjælpe dig?</p>
+          
           <a 
             href="kontakt.html" 
-            class="inline-flex items-center px-8 py-4 bg-white text-accent font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            class="inline-flex items-center px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition-colors"
+            aria-label="Skriv til Egedal Bogholderi"
           >
-            Kontakt mig
-          </a>
-          <a 
-            href="tel:+4530404494" 
-            class="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
-          >
-            +45 30 40 44 94
+            Skriv til mig
           </a>
         </div>
-      </div>
-    </section>
+      </article>
+    </div>
   </main>
 
   <Footer />
