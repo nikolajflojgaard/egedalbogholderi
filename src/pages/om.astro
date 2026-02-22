@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Om Egedal Bogholderi">
+  <Header />
+
+  <main class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-gray-900 mb-8">Om Egedal Bogholderi</h1>
+
+      <div class="prose prose-lg max-w-none">
+        <p class="text-xl text-gray-600 mb-8">
+          Egedal Bogholderi er et lokal bogholderi med sans for detalje og fokus på personlig service.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Personlig sparring</h2>
+        <p>
+          Når du arbejder med mig, får du direkte adgang til bogholder. Ingen callcentre, ingen automatisk svar — bare personlig sparring og hurtig hjælp når du har brug for det.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Fleksibel løsning</h2>
+        <p>
+          Jeg tilbyder fleksibel bogføring uden fast intern ansættelse. Det betyder, at du kun betaler for den tid jeg bruger på din virksomhed. Perfekt for små og mellemstore virksomheder, der ikke har behov for en fuldtids bogholder.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Faste arbejdsgange</h2>
+        <p>
+          Med løbende bogføring og faste arbejdsgange sikrer jeg, at din økonomi altid er up-to-date. Du får overblik og ro i maven, så du kan fokusere på det, du er bedst til — at drive din virksomhed.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Fast timepris</h2>
+        <p>
+          Jeg arbejder til en fast timepris på 450 kr + moms pr. påbegyndt time. Ingen skjulte gebyrer, ingen overraskelser — bare ærlig og gennemsigtig prissætning.
+        </p>
+
+        <div class="mt-12 p-8 bg-gray-50 rounded-2xl">
+          <h3 class="text-xl font-semibold mb-4">Kontakt mig</h3>
+          <p class="text-gray-600 mb-6">Har du spørgsmål eller vil du høre mere om, hvordan jeg kan hjælpe dig?</p>
+          
+          <a 
+            href="/kontakt" 
+            class="inline-flex items-center px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition-colors"
+          >
+            Skriv til mig
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

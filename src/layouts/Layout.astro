@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Egedal Bogholderi - Professionel bogføring i Egedal", 
+  description = "Egedal Bogholderi tilbyder personlig sparring og fleksibel bogføring til faste priser. 450 kr + moms pr. time. Kontakt os i dag."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg?v=eb" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-sans antialiased bg-white text-gray-900">
+    <slot />
+  </body>
+</html>
