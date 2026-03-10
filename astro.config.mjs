@@ -5,5 +5,8 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://egedalbogholderi.dk',
   base: '/',
-  trailingSlash: 'always',
+  trailingSlash: 'never',
+  build: {
+    format: 'file',
+  },
 });
