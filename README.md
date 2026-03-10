@@ -2,11 +2,11 @@
 
 Hjemmeside for Egedal Bogholderi — professionel bogføring med personlig sparring.
 
-## 🌐 Live Site
+## 🌐 Live site
 
 **URL:** https://egedalbogholderi.dk
 
-## 📝 Om Virksomheden
+## 📝 Om virksomheden
 
 Egedal Bogholderi tilbyder:
 - Løbende bogføring med faste arbejdsgange
@@ -20,12 +20,12 @@ Egedal Bogholderi tilbyder:
 - Telefon: 22 47 44 94
 - Email: Gitte@egedalbogholderi.dk
 
-## 🚀 Teknologi Stack
+## 🚀 Teknologi
 
 - **Framework:** Astro 5.x
 - **Styling:** Tailwind CSS
 - **Form:** EmailJS
-- **Hosting:** Simply.com (eller andet)
+- **Hosting:** Simply.com
 
 ## 🛠️ Udvikling
 
@@ -43,26 +43,49 @@ npm run build
 npm run preview
 ```
 
+## 📦 Hosting / build-format
+
+Denne side er sat op til hostingmiljøer, der forventer **flade HTML-filer** i webroden.
+
+Det betyder at build-outputtet nu genererer:
+- `index.html`
+- `om.html`
+- `kontakt.html`
+- `_astro/` til assets
+- `robots.txt`
+- `sitemap.xml`
+
+Det styres i `astro.config.mjs` med:
+- `trailingSlash: 'never'`
+- `build.format: 'file'`
+
+Hvis siden skal uploades manuelt via filmanager, skal webroden efter upload indeholde filer direkte som:
+
+```text
+index.html
+om.html
+kontakt.html
+style.css (hvis du bruger den flade upload-zip)
+_astro/
+robots.txt
+sitemap.xml
+```
+
 ## 📁 Projektstruktur
 
-```
+```text
 egedalbogholderi/
 ├── src/
-│   ├── components/      # Reusable components
-│   │   ├── Header.astro
-│   │   └── Footer.astro
-│   ├── layouts/         # Layout templates
-│   │   └── Layout.astro
-│   ├── pages/           # Pages
-│   │   ├── index.astro
-│   │   ├── om.astro
-│   │   └── kontakt.astro
-│   └── styles/          # CSS
-├── public/              # Static assets
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+├── public/
+├── release/
 └── package.json
 ```
 
-## 📧 EmailJS Opsætning
+## 📧 EmailJS opsætning
 
 Formularen bruger EmailJS til at sende beskeder:
 
@@ -74,39 +97,48 @@ Formularen bruger EmailJS til at sende beskeder:
 
 ## 📄 Sider
 
-### Forside (/)
+### Forside (`/`)
 - Hero med pris fremhævet
 - Services overview
 - Detaljeret ydelsesliste
 - CTA til kontakt
 
-### Om (/om)
+### Om (`/om.html`)
 - Personlig sparring
 - Fleksibel løsning
 - Faste arbejdsgange
 - Fast timepris
 
-### Kontakt (/kontakt)
+### Kontakt (`/kontakt.html`)
 - Kontaktoplysninger
 - EmailJS kontaktformular
 - Prisinformation
 
 ## 🎨 Design
 
-- **Primær farve:** Mørkeblå (#1e3a5f)
-- **Accent farve:** Grøn (#2d7d46)
+- **Primær farve:** Mørkeblå (`#1e3a5f`)
+- **Accent farve:** Grøn (`#2d7d46`)
 - **Font:** Inter
-- **Stil:** Professionel, minimalistisk
+- **Stil:** Professionel, enkel og troværdig
+
+## 🚀 Upload-zip
+
+Hvis siden skal uploades manuelt til hosting, kan du bygge og zippe sådan:
+
+```bash
+npm run build
+```
+
+Og derefter zippe indholdet af `dist/` så filerne ligger direkte i webroden efter udpakning.
 
 ## 📝 Todo
 
-- [ ] Tilføj Google Analytics
-- [ ] Cookie-banner
-- [ ] Rigtigt logo når det er klar
-- [ ] Deploy til egedalbogholderi.dk
+- [ ] Tilføj analytics når behovet er reelt
+- [ ] Cookie-banner hvis det bliver nødvendigt
+- [ ] Rigtigt logo hvis kunden vil have et separat brandmark
 
 ---
 
-**Lavet af:** Website Rescue / Nikolaj Fløjgaard
-**Kunde:** Egedal Bogholderi
-**Projekt start:** 22-02-2026
+**Lavet af:** ReichkendlerSolutions / Nikolaj Fløjgaard  
+**Kunde:** Egedal Bogholderi  
+**Projekt:** Hjemmeside + SEO
