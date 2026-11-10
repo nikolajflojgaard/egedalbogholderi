@@ -1,3 +1,5 @@
+# Out of scope - this repo is no longer in use
+
 # Egedal Bogholderi
 
 Hjemmeside for Egedal Bogholderi — professionel bogføring med personlig sparring.
